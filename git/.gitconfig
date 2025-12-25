@@ -1,0 +1,12 @@
+[user]
+    name = Alexandr Byzov
+    email = debesergopotes12@gmail.com
+
+[init]
+    defaultBranch = main
+
+[core]
+    editor = code --wait
+
+[pull]
+    rebase = true
