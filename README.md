@@ -1,4 +1,4 @@
-# How to use this setup
+# How to use this setup?
 
 To sync installed apps in `brew`, you need to use:
 
@@ -13,6 +13,26 @@ brew bundle dump --file ~/dotfiles/Brewfile --force
 ```
 
 The `dotfiles` directory becomes a source of truth for different tools. Then with `stow` you can sync symlinks. For example, `stow zsh` will create symlinks in `$HOME`that allows to easily set up new instruments.
+
+# How to use multiple Github accounts?
+
+If you have several git accounts, you can add several hosts.
+
+Example of ~/.ssh/config that allows for using multiple git accounts. When you do git clone, you use `git clone git@Host-of-ssh-config`. 
+
+```
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile path-to-identity-file
+    IdentitiesOnly yes
+    AddKeysToAgent yes
+    UseKeychain yes
+```
+
+- `IdentitiesOnly yes`: Prevents SSH from trying all keys (security & performance)
+- `AddKeysToAgent yes`: Caches passphrase in SSH agent
+- `UseKeychain yes`: (macOS) Stores passphrase in system keychain
 
 # Additional instructions
 
