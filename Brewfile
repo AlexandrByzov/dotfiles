@@ -1,5 +1,6 @@
 brew "docker"
 brew "jq"
+brew "k9s"
 brew "starship"
 brew "stow"
 brew "tmux"
