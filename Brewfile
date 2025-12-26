@@ -1,5 +1,6 @@
 brew "age"
 brew "docker"
+brew "git-filter-repo"
 brew "jq"
 brew "k9s"
 brew "kubernetes-cli"
