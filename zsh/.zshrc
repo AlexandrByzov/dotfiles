@@ -1,8 +1,13 @@
 # --- VIM MODE ---
 bindkey -v
 
+# --- ENVIRONMENT VARIABLES ---
+export GITHUB_USER=alexandrbyzov
+export GITHUB_TOKEN=$(security find-generic-password -s "github-mini-homelab-token" -w)
+
 # --- COMPLETION ---
 autoload -Uz compinit && compinit
+. <(flux completion zsh)
 
 # --- TOOLS ---
 eval "$(starship init zsh)"
