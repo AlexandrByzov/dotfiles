@@ -23,3 +23,6 @@ sops -d ~/.kube/config > "$KUBECONFIG"
 
 # --- ALIASES ---
 alias k='kubectl'
+
+# opencode
+export PATH=/Users/alexandrbyzov/.opencode/bin:$PATH
